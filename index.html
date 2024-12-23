@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Zaib Ali</title>
+  <link rel="icon" type="image/x-icon" href="favicon_io/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <header>
+    <span class="main-header-title">Zaib Ali</span>
+  </header>
+  <section class="hero animate">
+    <img src="images/profilePic.jpg" alt="profilePic">
+  </section>
+  <section class="information animate">
+    <h2>Hi, My Name is Zaib Ali.</h2>
+    <p>I am a Web Developer with the following skills:</p>
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React.js/Next.js</li>
+      <li>Express</li>
+      <li>MongoDb</li>
+    </ul>
+  </section>
+  <section class="projects animate">
+    <h2 class="projects-title">My Projects</h2> <!-- Added title for projects section -->
+    <div class="project-item">
+      <h3>Next.js Product Filter App</h3>
+      <a href="https://product-app-zaybali.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+    <div class="project-item">
+      <h3>Todo App</h3>
+      <a target="_blank" href="https://todo-app-zaybali.vercel.app/"><i
+          class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+    <div class="project-item">
+      <h3>Burger King Landing Page</h3>
+      <a href="https://bk-landing-page-zaybali.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+    <div class="project-item">
+      <h3>FoodPanda Clone</h3>
+      <a href="https://foodpanda-clone-zaybali.vercel.app/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+  </section>
+  <section class="cta animate">
+    <h2>Contact Me</h2>
+    <p>If you have any project in mind or want to collaborate, feel free to reach out!</p>
+    <a href="mailto:zaibali51@live.com" class="cta-button">Get in Touch</a>
+    <a target="_blank" href="https://www.linkedin.com/in/iamzaibali/" class="cta-button">Let’s connect – DM me!</a>
+  </section>
+  <footer class="animate">
+    <a href="https://github.com/zaybali"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/iamzaibali/"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://www.facebook.com/iamzaibali"><i class="fa-brands fa-facebook"></i></a>
+    <a href="mailto:zaibali51@live.com"><i class="fa-regular fa-envelope"></i></a>
+    <p>CopyRight &copy; 2025 Zaib Ali</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      });
+
+      document.querySelectorAll('.animate').forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+
+</html>
